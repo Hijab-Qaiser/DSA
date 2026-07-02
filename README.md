@@ -118,6 +118,17 @@ DSA/
 │   ├── string_stack.cpp
 │   └── README.md
 ├── queue/
+│   ├── README.md
+│   ├── linear_queue/
+│   │   ├── integer_queue.cpp
+│   │   ├── character_queue.cpp
+│   │   ├── string_queue.cpp
+│   │   └── README.md
+│   └── circular_queue/
+│       ├── integer_circular_queue.cpp
+│       ├── character_circular_queue.cpp
+│       ├── string_circular_queue.cpp
+│       └── README.md
 ├── linked-list/
 ├── trees/
 ├── graphs/
