@@ -5,15 +5,17 @@ The goal is not only to write working programs, but also to understand how each 
 
 ## Current Progress
 
-### Stack
+### Stack — Completed
 
-I started with the stack data structure and implemented fixed-size, array-based stacks for different data types:
+I started my DSA journey by implementing the **Stack** data structure using fixed-size arrays.
 
-* Integer Stack
-* Character Stack
-* String Stack
+I created separate stack programs for:
 
-Each program supports:
+* Integer values
+* Character values
+* String values
+
+Each stack program supports:
 
 * Push
 * Pop
@@ -28,6 +30,45 @@ These programs follow the **LIFO** principle:
 > Last In, First Out
 
 This means the most recently added value is the first value removed.
+
+---
+
+### Linear Queue — Completed
+
+After Stack, I implemented a basic **linear queue** using fixed-size arrays.
+
+I created separate queue programs for:
+
+* Integer values
+* Character values
+* String values
+
+Each queue program supports:
+
+* Enqueue
+* Dequeue
+* View queue
+* Queue full checking
+* Queue empty checking
+* Menu-based user interaction
+
+The queue uses two variables:
+
+* `headpointer` to track the front element
+* `tailpointer` to track the next empty position at the back
+
+These programs follow the **FIFO** principle:
+
+> First In, First Out
+
+This means the first value added to the queue is the first value removed.
+
+The current implementation is a **linear queue**, not a circular queue. Once the tail reaches the end of the array, previously emptied positions cannot be reused.
+
+### Next Step
+
+My next goal is to implement a **circular queue**, where empty positions created after dequeue operations can be reused.
+
 
 ## Repository Structure
 
@@ -47,13 +88,13 @@ DSA/
 ```
 
 
-
 ## Learning Roadmap
 
 | Topic              | Status              |
 | ------------------ | ------------------- |
 | Stack              | Completed           |
-| Queue              | Planned             |
+| Linear Queue       | Completed           |
+| Circular Queue     |  Next               |
 | Linked List        | Planned             |
 | Trees              | Planned             |
 | Graphs             | Planned             |
