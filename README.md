@@ -37,22 +37,22 @@ This means the most recently added value is the first value removed.
 
 After Stack, I implemented a basic **linear queue** using fixed-size arrays.
 
-I created separate queue programs for:
+I created separate linear queue programs for:
 
 * Integer values
 * Character values
 * String values
 
-Each queue program supports:
+Each program supports:
 
 * Enqueue
 * Dequeue
 * View queue
-* Queue full checking
-* Queue empty checking
+* Queue overflow checking
+* Queue underflow checking
 * Menu-based user interaction
 
-The queue uses two variables:
+The linear queue uses:
 
 * `headpointer` to track the front element
 * `tailpointer` to track the next empty position at the back
@@ -63,12 +63,50 @@ These programs follow the **FIFO** principle:
 
 This means the first value added to the queue is the first value removed.
 
-The current implementation is a **linear queue**, not a circular queue. Once the tail reaches the end of the array, previously emptied positions cannot be reused.
+A limitation of the linear queue is that once the tail reaches the end of the array, previously emptied positions cannot be reused.
+
+---
+
+### Circular Queue — Completed
+
+After completing the linear queue, I implemented a **circular queue** using fixed-size arrays.
+
+I created separate circular queue programs for:
+
+* Integer values
+* Character values
+* String values
+
+Each circular queue program supports:
+
+* Enqueue
+* Dequeue
+* View queue
+* Queue overflow checking
+* Queue underflow checking
+* Reusing empty positions after dequeue operations
+* Menu-based user interaction
+
+The circular queue uses:
+
+* `headpointer` to track the front element
+* `tailpointer` to track the next available position
+* `Count` to track the number of elements currently stored
+
+The queue uses modulo arithmetic:
+
+```cpp
+tailpointer = (tailpointer + 1) % 10;
+headpointer = (headpointer + 1) % 10;
+```
+
+This allows the pointers to return to the beginning of the array after reaching the final position.
+
+Unlike a linear queue, a circular queue can reuse empty positions created after dequeue operations, which prevents wasted space.
 
 ### Next Step
 
-My next goal is to implement a **circular queue**, where empty positions created after dequeue operations can be reused.
-
+My next goal is to learn and implement **Linked Lists**.
 
 ## Repository Structure
 
@@ -94,7 +132,7 @@ DSA/
 | ------------------ | ------------------- |
 | Stack              | Completed           |
 | Linear Queue       | Completed           |
-| Circular Queue     |  Next               |
+| Circular Queue     | Completed           |
 | Linked List        | Planned             |
 | Trees              | Planned             |
 | Graphs             | Planned             |
